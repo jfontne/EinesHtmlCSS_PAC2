@@ -15,9 +15,28 @@ var IdCat = urlParams.get('cat');
 //Filtrem la categoria per possar-hi el títol i la imatge de fons de la web
 var categoria = categories.filter(x => x.id === IdCat);
 
+//anem a comprobar la resolució de la pantalla inicialment per veure quines
+//imatges de l'slide triarem
+var resolució = window.outerWidth;
+
+
 //canvi imatge de fons canviant la propietat del CSS
 let element = document.getElementById('cos');
-element.style.backgroundImage = `url('img/categories/${categoria[0].img}'`;
+
+//imatge de fons segons resolució
+if(resolució>700){//Comprovem la resolució inicial del dispositiu
+    //Desktop
+    element.style.backgroundImage = `url('img/categories/${categoria[0].img}'`;
+  }
+  else{
+    //Mobile
+    element.style.backgroundImage = `url('img/slide/mobil/${categoria[0].img}'`;
+  }
+
+
+
+
+
 
 //Canviem el títol de la capçalera
 const titolCat = document.getElementById('titolCap');
