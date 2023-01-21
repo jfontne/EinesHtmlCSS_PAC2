@@ -110,7 +110,7 @@ grups.forEach(grup =>{
   let imgGrup =  document.createElement('img');
   let linkGrup = document.createElement('a');
   imgGrup.className = 'imgGrup';
-  imgGrup.srcset = `img/grups/${grup.fotoGrup}`;
+  imgGrup.srcset = `img/grups/miniatures/${grup.fotoGrup}`;
   imgGrup.alt = grup.nom;
   imgGrup.loading="lazy";
 
@@ -121,6 +121,7 @@ grups.forEach(grup =>{
   titolGrup.innerText = grup.nom;
   divGrup.appendChild(linkGrup);
   divGrup.appendChild(titolGrup);
+  
   containerGrup.append(divGrup);
   
 });
