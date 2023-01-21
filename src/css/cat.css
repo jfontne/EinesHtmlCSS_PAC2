@@ -234,6 +234,7 @@ main{
     font-size: 1rem;
     color: aqua;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .song .videoSong {
@@ -264,13 +265,18 @@ main{
 }
 
 .dadesSong ul li a {
+    width: 100%;
     color: bisque;
+    font-size: 24px;
+    padding-top: 10px;
+    text-align: center;
+    
 }
 
 
 .titolSong {
     color: white;
-    font-size: 1.2rem;
+    font-size: 24px;
     text-align: left;
 }
 
