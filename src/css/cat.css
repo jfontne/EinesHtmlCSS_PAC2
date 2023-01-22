@@ -60,12 +60,12 @@ h1{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: black;
-    background-image: url('../img/fons/fonsWeb.jpg');
+    background-image: url(../img/fonsWeb.jpg);
 }
 
 #cos {
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -79,7 +79,7 @@ header {
     padding: 0;
     margin: 0;
     background-color: #333333;
-    background-image: url('../img/fons/fonsCap.jpg');
+    background-image: url(../img/fonsCap.jpg);
     text-align: center;
     position: fixed;
     box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.15);
@@ -234,7 +234,6 @@ main{
     font-size: 1rem;
     color: aqua;
     font-weight: bold;
-    font-size: 20px;
 }
 
 .song .videoSong {
@@ -265,30 +264,20 @@ main{
 }
 
 .dadesSong ul li a {
-    display: block;
-    width: 100%;
     color: bisque;
-    font-size: 24px;
-    height: 40px;
-    margin-top: 10px;
-    border-radius: 25px;
-    background-color: gray;
-    margin-left: 0;
-    padding-top: 2.5%;
-    text-align: center;
 }
 
 
 .titolSong {
     color: white;
-    font-size: 24px;
+    font-size: 1.2rem;
     text-align: left;
 }
 
 footer {
     margin-top: 20px;
     background-color: #333333;
-    background-image: url('../img/fons/fonsCap.jpg');
+    background-image: url(../img/fonsCap.jpg);
     color: white;
     display: flex;
     flex-direction: row;
@@ -320,11 +309,6 @@ altres retocs serien treure els paddings i marges per aprofitar millor els mòbi
         height: 150px;
         align-items: center;
         justify-content: stretch;
-        background-image: url('../img/fons/mobil/fonsCap.jpg');
-    }
-
-    .general{
-        background-image: url('../img/fons/mobil/fonsWeb.jpg');
     }
 
     #imatgeCap{
@@ -332,68 +316,55 @@ altres retocs serien treure els paddings i marges per aprofitar millor els mòbi
         padding-right: 0px;
     }
 
+   
     #titolCap{
         color: white;
         padding: 0px;
         text-transform: uppercase;
     }
-
    
     #menu{
         flex-direction: row;
         padding: 0;
         margin: 0;
     }
-    .opcio{
-        font-size: 24px;
-    }
-    main{
-        margin-top: 160px;
-        margin-bottom: 400px;
-    }
-    .swiper {
-        height: 450px;
-      
-      }
-      .swiper-button-next,
-      .swiper-button-prev {
-         outline: none;
-         visibility: hidden;
-      }
-      
-      div.swiper-button-next, div.swiper-button-prev {
-        top: 50%
-      }
-      .swiper-slide{
-        color: black;
-      }
-      .swiper-slide img{
+    
+    #containerCat {
+        margin: 0;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0;
         width: 100%;
-      }
-      .contingut{
-        text-align: center;
-        font-size: 14px;
-        width: 100%;
-        padding: 0;
-      }
-      .swiper-wrapper h1{
-        font-size: 3rem;
-        text-align: center;
-        text-shadow: 1px 1px 2px black;
     }
 
-    footer{
-        font-size: 24px;
+    .puntCat {
+        width: 42%;
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .puntActiu {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        width: 85%;
+    }
+
+    .miniatura{
+        width: 90%;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    main{
+        margin-top: 150px;
+        margin-bottom: 300px;
+    }
+
+    footer {
         padding-top: 20px;
         flex-direction: column;
-    }
-    footer div{
-        width: 100%;
-    }
-    .llistaPeu li{
-        padding-top: 15px;
-    }
-    .despPeu{
-        font-size: 24px;
     }
 }

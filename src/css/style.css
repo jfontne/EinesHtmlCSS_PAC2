@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-
 
 /* Aquí definim l'animació dels grups, simplement augmentem la mida i serà quan passem
 el ratolí per sobre */
@@ -66,7 +64,7 @@ html {
     margin: 0;
     font-family: 'Montserrat', sans-serif; 
     background-color: black;
-    background-image: url('../img/fons/fonsWeb.jpg');
+    background-image: url('../img/fonsWeb.jpg');
 }
 
 header{
@@ -81,7 +79,7 @@ header{
     padding: 0;
     margin: 0;
     background-color: #333333;
-    background-image: url('../img/fons/fonsCap.jpg');
+    background-image: url('../img/fonsCap.jpg');
     text-align: center;
     box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.15);
 }
@@ -120,7 +118,6 @@ header{
 .opcio{
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 18px;
 }
 
 /* Tractament dels links dins de la pàgina */
@@ -198,7 +195,7 @@ main {
 /*swipper*/
 .swiper {
     display: flex;
-    height: 450px;
+    height: 50vh;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -233,6 +230,7 @@ main {
   }
 
 .contingut{
+    
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -320,7 +318,7 @@ main {
 footer{
     margin-top: 20px;
     background-color: #333333;
-    background-image: url('../img/fons/fonsCap.jpg');
+    background-image: url(../img/fonsCap.jpg);
     color: white;
     display: flex;
     flex-direction: row;
@@ -368,7 +366,7 @@ footer div{
     color: #888888;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
     header{
         flex-direction: column;
         height: 150px;
@@ -393,15 +391,12 @@ footer div{
         padding: 0;
         margin: 0;
     }
-    .opcio{
-        font-size: 24px;
-    }
     main{
-        margin-top: 160px;
-        margin-bottom: 500px;
+        margin-top: 150px;
+        margin-bottom: 350px;
     }
     .swiper {
-        height: 450px;
+        height: 50vh;
       
       }
       .swiper-button-next,
@@ -432,18 +427,11 @@ footer div{
     }
 
     footer{
-        font-size: 24px;
         padding-top: 20px;
         flex-direction: column;
     }
     footer div{
         width: 100%;
-    }
-    .llistaPeu li{
-        padding-top: 15px;
-    }
-    .despPeu{
-        font-size: 24px;
     }
 }
 

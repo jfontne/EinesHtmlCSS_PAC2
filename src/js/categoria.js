@@ -1,7 +1,6 @@
 import categories from '../data/categories.json' /*assert {type: "json"}*/;
 import songs from '../data/songs.json' /*assert {type: "json"}*/;
 
-
 //recuperem els paràmetres enviats a la web
 const valores = window.location.search;
 
@@ -15,28 +14,9 @@ var IdCat = urlParams.get('cat');
 //Filtrem la categoria per possar-hi el títol i la imatge de fons de la web
 var categoria = categories.filter(x => x.id === IdCat);
 
-//anem a comprobar la resolució de la pantalla inicialment per veure quines
-//imatges de l'slide triarem
-var resolució = window.outerWidth;
-
-
 //canvi imatge de fons canviant la propietat del CSS
 let element = document.getElementById('cos');
-
-//imatge de fons segons resolució
-if(resolució>700){//Comprovem la resolució inicial del dispositiu
-    //Desktop
-    element.style.backgroundImage = `url('img/categories/${categoria[0].img}'`;
-  }
-  else{
-    //Mobile
-    element.style.backgroundImage = `url('img/slide/mobil/${categoria[0].img}'`;
-  }
-
-
-
-
-
+element.style.backgroundImage = `url('img/${categoria[0].img}'`;
 
 //Canviem el títol de la capçalera
 const titolCat = document.getElementById('titolCap');
@@ -69,19 +49,7 @@ llistaCat.className = 'llista';
         single.className = "song";
         let video = document.createElement('div');
         video.className = "videoSong";
-        //Utilitzem srcdoc per especificar l'enllaç al video i la imatge predeterminada del video, així evitem carregar el video de l'iframe per defecte
-        //de youtube, només carrega la imatge predeterminada i l'enllaç al video, GENIAL!
-        video.innerHTML = `<iframe 
-                            src="${song.video}"
-                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;
-                                        top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;
-                                        text-shadow:0 0 0.5em black}</style>
-                                    <a href=${song.video}><img src=https://img.youtube.com/vi/${song.idVideo}/hqdefault.jpg alt='${song.titulo}'><span>▶</span></a>"
-                                    frameborder="0"
-                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen
-                                    title="${song.titulo}"
-                           ></iframe>`
+        video.innerHTML = `<iframe src="${song.video}" title="${song.titulo}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         let dades = document.createElement('div');
         dades.className = "dadesSong";
         let titolSong = document.createElement('H1');
@@ -95,9 +63,9 @@ llistaCat.className = 'llista';
         let creditos = `<li><b>Autors:</b> ${song.creditos}</li>`
         let album = `<li><b>Àlbum:</b> ${song.álbum} (${song.año})</li>`
         let descripcion = `<li><p><b>Comentari:</b></p> ${song.descripcion}</li>`
-        let webGrupo = `<li><a href="${song.webGrupo}">web</a></li>`
+        let webGrupo = `<li><b>Web:</b> <a href="${song.webGrupo}">${song.webGrupo}</a></li>`
         let categoria = `<li><p><b>Categoria:</b></p> ${song.categoria}</li>`
-        let wikipedia = `<li><a href="${song.wikipedia}">Wikipedia</a></li>`
+        let wikipedia = `<li><b>Wiki:</b> <a href="${song.wikipedia}">anar-hi</a></li>`
         let htmlDades =  creditos + album  + webGrupo  + wikipedia;
         dadesSong.innerHTML = htmlDades;
         
